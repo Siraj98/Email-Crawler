@@ -39,7 +39,7 @@ def is_correct_url(url):
     extension = extension.strip('\n')
     extension = extension.lower()
 
-    ext_list = ['aac', 'ai', 'amr', 'avi', 'bat', 'css', 'csv', 'dat', 'docx', 'esp', 'flv', 'gif', 'jpeg', 'jpf', 'jpg', 'js', 'json', 'm4r', 'mkv', 'mp2', 'mp3', 'mp4', 'mpeg', 'mpv', 'ogg', 'pcap', 'pdf', 'png', 'ppt', 'psd', 'py', 'tiff', 'txt', 'wav', 'wma', 'wmv']
+    ext_list = ['aac', 'ai', 'amr', 'avi', 'bat', 'css', 'csv', 'dat', 'docx', 'esp', 'flv', 'gif', 'jpeg', 'jpf', 'jpg', 'js', 'json', 'm4r', 'mkv', 'mp2', 'mp3', 'mp4', 'mpeg', 'mpv', 'ogg', 'pcap', 'pdf', 'png', 'ppt', 'psd', 'py', 'svg', 'tiff', 'txt', 'wav', 'wma', 'wmv']
 
     if search(ext_list, extension):
         return False
