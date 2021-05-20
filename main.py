@@ -33,7 +33,7 @@ def is_correct_url(url):
     url_components = url.split('.')
 
     if len(url_components) == 0:
-        return True
+        return False
 
     extension = url_components[len(url_components)-1]
     extension = extension.strip('\n')
