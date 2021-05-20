@@ -63,7 +63,13 @@ def email_fetch(urls_file_name):
 
             if is_correct_url(url):
                 try:
-                    response_data = urllib.request.urlopen(url)
+                    response = urllib.request.Request(
+                        url,
+                        headers = {
+                            'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.3'
+                        }
+                    )
+                    response_data = urllib.request.urlopen(response)
                 except urllib.error.HTTPError as e:
                     print(f'HTTPError: {e.code}')
                     print('Processing next...')
@@ -94,7 +100,14 @@ def main():
     url = input('Enter a web url: ')
 
     try:
-        response_data = urllib.request.urlopen(url)
+        response = urllib.request.Request (
+            url,
+            headers = {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.3'
+            }
+        )
+
+        response_data = urllib.request.urlopen(response)
     except urllib.error.HTTPError as e:
         print(f'HTTPError: {e.code}')
         sys.exit()
